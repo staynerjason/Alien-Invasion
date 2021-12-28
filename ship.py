@@ -15,9 +15,7 @@ class Ship(pygame.sprite.Sprite):
 
         # Start each new ship at the bottom center of the screen.
         self.rect.midbottom = self.screen_rect.midbottom
-
         self.x = float(self.rect.x)
-        
         self.WIDTH, self.HEIGHT = self.rect.size
 
         self.moving_right = False
@@ -29,12 +27,13 @@ class Ship(pygame.sprite.Sprite):
             self.rect.x += self.settings.ship_speed
         elif self.moving_left and self.rect.left > 0 : 
             self.rect.x -= self.settings.ship_speed
-
         self.x = self.rect.x
   
+
     def blitme(self):
         """Draw the ship at its current location."""
         self.screen.blit(self.image, self.rect)
+
 
     def center(self):
         """Centers ship in the screen."""

@@ -138,14 +138,13 @@ class AlienInvasion:
                 self.stats.score += self.settings.alien_points * len(alien)
             self.scoreboard.prep_score()
             self.scoreboard.check_high_score()
-
         if not self.aliens:
             self.bullets.empty()
             self._create_fleet()
             self.settings.increase_speed()
-            
             self.stats.level += 1
             self.scoreboard.prep_level()
+
 
     def _create_alien(self, alien_number, row_number):    
         """Creates an alien and places it in a row."""
@@ -163,6 +162,7 @@ class AlienInvasion:
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
             self._ship_hit()
         self._check_aliens_bottom()
+
     
     def _create_fleet(self):
         """Create the alien fleet."""
@@ -246,8 +246,9 @@ class AlienInvasion:
 
     def _init_joysticks(self):
             pygame.joystick.init()
-            joysticks = [pygame.joystick.Joystick(x) for x in range(pygame.joystick.get_count())]
-            self.joystick_0 = joysticks[0]
+            if  pygame.joystick.get_count() > 0:
+                joysticks = [pygame.joystick.Joystick(x) for x in range(pygame.joystick.get_count())]
+                self.joystick_0 = joysticks[0]
 
 
 

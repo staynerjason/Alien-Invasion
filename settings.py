@@ -24,10 +24,11 @@ class Settings:
         self.alien_speed : int = 1
         self.fleet_drop_speed : int = 10
         self.fleet_direction : int = 1
-
         self.speedup_scale : float = 1.15
         self.score_scale : float = 1.2
+        
         self.initialize_dynamic_settings()
+
 
     def initialize_dynamic_settings(self):
         """Initialize settings that change throughout the game."""
@@ -36,18 +37,18 @@ class Settings:
         
         # Bullet Settings
         self.bullet_speed : int = 2
-       
+        
         # Alien Settings
         self.alien_speed : int = 1
         self.alien_points : int = 50
         self.fleet_direction : int = 1
+
 
     def increase_speed(self):
         """Increase speed and point value settings."""
         self.ship_speed *= self.speedup_scale
         self.bullet_speed *= self.speedup_scale
         self.alien_speed *= self.speedup_scale
-
         self.alien_points = int(self.alien_points * self.score_scale)
         
         
