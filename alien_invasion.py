@@ -33,8 +33,6 @@ class AlienInvasion:
         self.play_button = Button(self, "Play")
 
         
-
-
     def run_game(self):
         """Start the main loop for game."""
         while True:
