@@ -37,7 +37,7 @@ class ScoreBoard:
     def prep_score(self):
         """Turns the score into a renderd image.""" 
         rounded_score = round(self.stats.score, -1)
-        score_str = f"{rounded_score:,}"
+        score_str = f"SCORE: {rounded_score:,}"
         self.score_image = self.FONT.render(score_str, True, self.TEXT_COLOR, self.settings.BG_COLOR)
         self.score_rect = self.score_image.get_rect()
         self.score_rect.right = self.screen_rect.right - 20
@@ -47,7 +47,7 @@ class ScoreBoard:
     def prep_high_score(self):
         """"Turns High score into an image."""
         high_score = round(self.stats.high_score, -1)
-        high_score_str = f"{high_score:,}"
+        high_score_str = f"HIGH SCORE: {high_score:,}"
         self.high_score_image = self.FONT.render(high_score_str, True, self.TEXT_COLOR, self.settings.BG_COLOR)
         self.high_score_rect = self.high_score_image.get_rect()
         self.high_score_rect.centerx = self.screen_rect.centerx
@@ -63,7 +63,7 @@ class ScoreBoard:
 
     def prep_level(self):
         """Turns level into a renderd image."""
-        level_str = str(self.stats.level)
+        level_str = f"LEVEL: {self.stats.level}"
         self.level_image = self.FONT.render(level_str, True, self.TEXT_COLOR, self.settings.BG_COLOR)
         self.level_rect = self.level_image.get_rect()
         self.level_rect.right = self.score_rect.right
