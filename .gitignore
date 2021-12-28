@@ -1,2 +1,10 @@
 workspace.code-workspace
 
+__pycache__/alien.cpython-39.pyc
+__pycache__/bullet.cpython-39.pyc
+__pycache__/button.cpython-39.pyc
+__pycache__/game_stats.cpython-39.pyc
+__pycache__/scoreboard.cpython-39.pyc
+__pycache__/settings.cpython-39.pyc
+__pycache__/ship.cpython-39.pyc
+__pycache__/
