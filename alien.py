@@ -12,7 +12,7 @@ class Alien(pygame.sprite.Sprite):
         self.screen_rect = ai_game.screen.get_rect()
 
         #Load the alien image and set its rect atrbute.
-        self.image = pygame.image.load('Alien Invasion/images/alien.bmp')
+        self.image = pygame.image.load('images/alien.bmp')
         self.rect = self.image.get_rect()
 
         #Start each new alien near the top of the screen.
