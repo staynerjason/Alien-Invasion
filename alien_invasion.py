@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+from os import environ
+environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
 import pygame
 import sys
 import time
@@ -47,6 +50,8 @@ class AlienInvasion:
     def _check_events(self):
         """Responds to key presses and mouse events."""
         for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_pos = pygame.mouse.get_pos()
                 self._check_play_button(mouse_pos)

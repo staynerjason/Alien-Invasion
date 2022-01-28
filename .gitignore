@@ -1,2 +1,7 @@
 workspace.code-workspace
 __pycache__/
+extras/Alien Invasion
+extras/.DS_Store
+.DS_Store
+high_score.csv
+
