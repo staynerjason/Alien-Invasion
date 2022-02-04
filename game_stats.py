@@ -6,7 +6,7 @@ import datetime
 class GameStats:
     """Tracks stats for Alien Invasion."""
 
-    def __init__(self, ai_game) -> None:
+    def __init__(self, ai_game):
         """Initalizes statistics."""
         self.filename = 'high_score.csv'
         self.settings = ai_game.settings
@@ -22,7 +22,7 @@ class GameStats:
         self.level = 0
 
 
-    def read_high_score(self) -> int:
+    def read_high_score(self):
         """Opens the high score file and returns the latest high score."""
         with open(self.filename, 'r') as f:
             reader = csv.reader(f)
